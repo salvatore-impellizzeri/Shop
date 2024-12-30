@@ -1,5 +1,5 @@
 import { CartContext } from "../store/shopping-cart-context";
-import { use } from "react";
+import { useContext } from "react";
 
 export default function Product({
   id,
@@ -9,7 +9,7 @@ export default function Product({
   description,
 }) {
 
-  const { addItemToCart } = use(CartContext)
+  const { addItemToCart } = useContext(CartContext)
 
   return (
     <article className="product">
